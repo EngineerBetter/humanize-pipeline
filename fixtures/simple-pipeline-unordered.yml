@@ -1,0 +1,10 @@
+jobs:
+- plan:
+  - trigger: true
+    get: 2hours
+  name: nothing
+resources:
+- source:
+    interval: 2h
+  type: time
+  name: 2hours
