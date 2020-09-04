@@ -98,8 +98,8 @@ type Step struct {
 	// Sub-options
 	Resource      string      `yaml:"resource,omitempty"`
 	Passed        []string    `yaml:"passed,omitempty"`
-	File          string      `yaml:"file,omitempty"`
 	Image         string      `yaml:"image,omitempty"`
+	File          string      `yaml:"file,omitempty"`
 	Params        interface{} `yaml:"params,omitempty"`
 	Trigger       bool        `yaml:"trigger,omitempty"`
 	Version       interface{} `yaml:"version,omitempty"`
