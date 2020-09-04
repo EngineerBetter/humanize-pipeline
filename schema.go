@@ -98,14 +98,14 @@ type Step struct {
 	// Sub-options
 	Resource      string      `yaml:"resource,omitempty"`
 	Passed        []string    `yaml:"passed,omitempty"`
+	File          string      `yaml:"file,omitempty"`
+	Image         string      `yaml:"image,omitempty"`
 	Params        interface{} `yaml:"params,omitempty"`
 	Trigger       bool        `yaml:"trigger,omitempty"`
 	Version       interface{} `yaml:"version,omitempty"`
 	Inputs        string      `yaml:"inputs,omitempty"`
 	GetParams     interface{} `yaml:"get_params,omitempty"`
-	Config        Task        `yaml:"config,omitempty"`
-	File          string      `yaml:"file,omitempty"`
-	Image         string      `yaml:"image,omitempty"`
+	Config        TaskConfig  `yaml:"config,omitempty"`
 	Privileged    bool        `yaml:"privileged,omitempty"`
 	Vars          interface{} `yaml:"vars,omitempty"`
 	InputMapping  interface{} `yaml:"input_mapping,omitempty"`
@@ -132,7 +132,7 @@ type InParallelStep struct {
 
 // Task
 // Ref: https://concourse-ci.org/tasks.html
-type Task struct {
+type TaskConfig struct {
 	Platform        string            `yaml:"platform,omitempty"`
 	ImageSource     AnonymousResource `yaml:"image_source,omitempty"`
 	Inputs          []Input           `yaml:"inputs,omitempty"`

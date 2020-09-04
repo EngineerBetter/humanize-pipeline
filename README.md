@@ -37,6 +37,7 @@ jobs:
 
 - Makes no attempt to validate the pipeline before or after reordering
 - Does not preserve linebreaks between keys
+- `in_parallel` must have nested `steps` key
 - Tests do not cover all pipeline schema options (WIP)
 
 ## Installation
